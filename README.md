@@ -44,7 +44,7 @@ Closure gives you access to the scope of an outer function. For the counter func
 Principal 1: Window/Global Object Binding: The value of 'this' will be set to the global object.
 Principal 2: Implicit Binding: The object to the left of a dot calling a function is 'this'. 
 Principal 3: New Binding: The 'this' keyword will be binded to the newly created object and returned by the constructor function. 
-Principal 4: Explicit Binding: When we use the call or apply method, 'this' gets explicit binding. We can call a function with an object even when the function is outside of the scope of the object.
+Principal 4: Explicit Binding: When we use the call or apply method, 'this' gets explicit binding. Meaning that we can call a function with an object even when the function is outside of the scope of the object.
 
 5. Why do we need super() in an extended class?
 

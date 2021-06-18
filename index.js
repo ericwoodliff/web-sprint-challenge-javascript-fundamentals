@@ -34,7 +34,7 @@ function summation(number) {
     summation += i;
   } 
   return summation;
-  }
+}
   
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -129,7 +129,7 @@ const zooAnimals = [
 function add(a, b, cb){
     return a + b;
     cb(); 
-    }
+  }
      
 
     
@@ -218,17 +218,18 @@ CuboidMaker.prototype.surfaceArea = function(){
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo{
-  constructor(thing){
-    this.length = thing.length;
-    this.width = thing.width;
-    this.height = thing.height;
+class CuboidMakerTwo {
+  constructor({cuboidTwo, length, width, height}){
+    this.cuboidTwo = cuboidTwo;
+    this.length = length;
+    this.width = width;
+    this.height = height;
   }
   surfaceArea() {
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
   volume() {
-    return this.length * this.width * this.height;
+    return (this.length * this.width * this.height);
   }
 }
 
