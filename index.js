@@ -61,9 +61,10 @@ const zooAnimals = [
 
   function animalNames(data){
     const dataOrder = [];
-    zooAnimals.forEach(function(item) {
-      return dataOrder.push(`Name: ${item.animal_name}, scientific: ${scientific_name}`)
+    data.forEach(function(item) {
+      return dataOrder.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
     });
+    return dataOrder;
   }
   
 
@@ -86,8 +87,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const smallPops = array.filter(function(item){
+      return item.population < 5;
+    });
+    return smallPops;
   }
   
 
@@ -97,8 +101,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+    const bigPop = array.reduce(function(acc, item){
+      return acc + item.population;
+    },0);
+    return bigPop; 
   }
   
   
@@ -110,17 +117,20 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    return cb(a, b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(cbFunction){
+      return (a + b);
+    
   }
+  
+
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
@@ -152,8 +162,10 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(attributes){
+  this.length = attributes.length;
+  this.width = attributes.width; 
+  this.height = attributes.height;
 }
 
 
@@ -161,7 +173,9 @@ function CuboidMaker(/*Your Code Here */){
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+CuboidMaker.prototype.volume = function(){
+  return this.length * this.width * this.height;
+}
 
 
 
@@ -170,7 +184,9 @@ function CuboidMaker(/*Your Code Here */){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-
+CuboidMaker.prototype.surfaceArea = function(){
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
 
 
 
