@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+//nestedFunction is a closure of myFunction, meaning it has scope of the variables declared in myFunction. 
 
 
 
@@ -28,9 +28,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let summation = 0;
+  for (let i = 1; i <= number; i++) {
+    summation += i;
+  } 
+  return summation;
   }
  
 
@@ -56,8 +59,11 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(data){
+    const dataOrder = [];
+    zooAnimals.forEach(function(item) {
+      return dataOrder.push(`Name: ${item.animal_name}, scientific: ${scientific_name}`)
+    });
   }
   
 
@@ -67,8 +73,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+      const newArray = array.map(function(item){
+        return item.animal_name.toLowerCase();
+      });
+      return newArray;
   }
   
   
