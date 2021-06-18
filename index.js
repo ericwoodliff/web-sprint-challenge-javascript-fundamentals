@@ -35,7 +35,7 @@ function summation(number) {
   } 
   return summation;
   }
- 
+  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -86,14 +86,15 @@ const zooAnimals = [
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
-
+ 
   function lowPopulationAnimals(array){
     const smallPops = array.filter(function(item){
       return item.population < 5;
     });
     return smallPops;
   }
-  
+
+ 
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -130,9 +131,8 @@ function add(a, b, cb){
     cb(); 
     }
      
-  
 
-
+    
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
 function multiply(a, b, cb){
@@ -148,9 +148,9 @@ function greeting(a, b){
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  // console.log(consume(2, 2, add)); // 4
-  // console.log(consume(10, 16, multiply)); // 160
-  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+   console.log(consume(2, 2, add)); // 4
+   console.log(consume(10, 16, multiply)); // 160
+   console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
   
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
@@ -243,8 +243,6 @@ class CuboidMakerTwo{
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
-
 
 
 
